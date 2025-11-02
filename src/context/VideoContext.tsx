@@ -146,7 +146,7 @@ export const VideoContextProvider = ({ children }: VideoContextProviderProps) =>
           chrome.storage.onChanged.addListener((changes: any, namespace: any) => {
             if (namespace === 'local') {
               if (changes.currentVideoId) {
-                setCurrentVideoChannel(changes.currentVideoChannel.newValue);
+                setCurrentVideoId(changes.currentVideoId.newValue);
               }
               if (changes.currentVideoTitle) {
                 setCurrentVideoTitle(changes.currentVideoTitle.newValue);
