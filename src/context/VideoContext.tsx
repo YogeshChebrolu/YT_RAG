@@ -55,12 +55,9 @@ export const VideoContextProvider = ({ children }: VideoContextProviderProps) =>
   const { session } = useSession();
 
   // Wrapper function to handle both direct array and callback patterns
-  const setChatHistory = useCallback((messages: Message[] | ((prev: Message[]) => Message[])) => {
-    if (typeof messages === 'function') {
+  const setChatHistory = useCallback((messages: Message[]) => {  
       setChatHistoryState(messages);
-    } else {
-      setChatHistoryState(messages);
-    }
+      
   }, []);
 
   const handleCaptureCurrentScreenShot = useCallback(() => {
