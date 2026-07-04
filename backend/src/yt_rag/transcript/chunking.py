@@ -89,9 +89,10 @@ async def get_transcript_chunks(youtube_url: str, chunk_duration: int, overlap_e
                 overlap_entires=5        
             )
             logger.info(f"Successfully chunked into : {len(transcript_chunks)} chunks")
-            return big_chunk, transcript_chunks
+            return transcript_chunks, big_chunk
         else:
-            return []
+            logger.warning("No transcript data available from fallback")
+            return None, None
 
 if __name__ == "__main__":
     big_chunk, transcript_chunks = asyncio.run(get_transcript_chunks("https://www.youtube.com/watch?v=GOejI6c0CMQ", 200, 5))

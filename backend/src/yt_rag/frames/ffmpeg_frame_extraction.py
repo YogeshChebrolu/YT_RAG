@@ -19,7 +19,7 @@ def extract_frames_fast(stream_url: str, video_id:str):
     command = [
         'ffmpeg',
         '-i', stream_url,
-        '-vf', 'fps=1/20',
+        '-vf', 'fps=1/60',
         f'{output_dir}/frame_%04d.jpg'
     ]
     

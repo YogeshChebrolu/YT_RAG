@@ -13,7 +13,7 @@ def fallback_transcript_extract(youtube_url: str):
         big_chunk, transcript_chunks = format_fetched_transcript(transcript_data)
         return big_chunk, transcript_chunks
     except NoTranscriptFound as e:
-        return []
+        return None, None
 
 def format_fetched_transcript(transcript_data):
     big_chunk = ""
