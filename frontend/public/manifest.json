@@ -9,7 +9,8 @@
       "storage", 
       "activeTab",
       "declarativeContent",
-      "sidePanel"
+      "sidePanel",
+      "identity"
     ],
     "icons": {
       "16":"icons/logo.png",

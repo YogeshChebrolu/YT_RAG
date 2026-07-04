@@ -1,0 +1,34 @@
+# Python
+.venv/
+env/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Environment variables
+.env
+
+# Large files
+*.mp4
+*.mkv
+*.zip
+*.7z
+*.tar
+*.gz
+*.bin
+*.pt
+*.pth
+*.pkl
+*.h5
+*.onnx
+*.parquet
+
+# Data files
+*.csv
+
+# Lock files
+uv.lock
+package-lock.json
+
+# Jupyter notebooks
+*.ipynb
